@@ -4,16 +4,16 @@
   
   
   <entry>
-    <title>数据提取与特征定义</title>
-    <link href="/tongmo/2021/12/16/0%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96%E4%B8%8E%E7%89%B9%E5%BE%81%E5%AE%9A%E4%B9%89/"/>
-    <url>/tongmo/2021/12/16/0%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96%E4%B8%8E%E7%89%B9%E5%BE%81%E5%AE%9A%E4%B9%89/</url>
+    <title>靠谱，是一个人最大的资产</title>
+    <link href="/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/"/>
+    <url>/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/</url>
     
-    <content type="html"><![CDATA[<p>在真实的工作中（不是建模比赛），数据往往要在企业的数据湖中提取，如何从原始数据库中有效地提取数据，然后合理地定义Y和X，确保“业务意义-数据逻辑”的合理对应，以及对有价值信息尽量全面的覆盖。</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe><p>可帅常常教导我们，不要关注比赛结果，只是数字游戏而已，要关注真实的业务需求。</p>]]></content>
+    <content type="html"><![CDATA[<p>用兑现承诺，挣得信用；用信用积分，换得信任；从信任里面，获得自由。</p><span id="more"></span><p>文章首先介绍了什么是靠谱，包括做事有回应、人品好值得托付和可以患难与共三个点。</p><p>然后介绍了不靠谱的人是什么样的，比如说话夸张，把没实现的说成实现了，乱承诺。</p><p>再然后强调了<code>想到</code>和<code>做到</code>之间的关系，它们之间有着巨大的鸿沟，但有些人却误以为想到了就约等于做到。<code>想到</code>什么对人是没有帮助，不会让人改变或者让人进步。只有<code>做到</code>才行。</p>]]></content>
     
     
     <categories>
       
-      <category>数据预处理</category>
+      <category>鸡汤</category>
       
     </categories>
     
@@ -23,16 +23,16 @@
   
   
   <entry>
-    <title>数据探索性分析和预处理</title>
-    <link href="/tongmo/2021/12/16/1%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%88%86%E6%9E%90%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86/"/>
-    <url>/tongmo/2021/12/16/1%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%88%86%E6%9E%90%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86/</url>
+    <title>靠谱，是一个人最大的资产</title>
+    <link href="/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/"/>
+    <url>/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/</url>
     
-    <content type="html"><![CDATA[<p>探索性分析和缺失值/异常值等预处理不能只依赖数据分布特征，必须充分结合数据对应的业务逻辑，最好能回到数据采集环节进行核查/校正</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe><h1 id="直接观察"><a href="#直接观察" class="headerlink" title="直接观察"></a>直接观察</h1><p>不管特征是否进行了脱敏，首先都需要观察哪些特征是定类，哪些是定量，哪些是时间。特征与特征之间是否存在关联，不见得非得是相关系数，比如两个特征数量级差不多，但一个总比另一个更大，如果一个人在多个时间点有记录，可以按照按照时间排序，观察哪些特征是只增不减的累积量（存量）、哪些特征是增量</p><ol><li>确定是截面数据还是面板数据</li><li>每个特征是在<code>定类</code>、<code>定量</code>、<code>时间</code></li><li>特征之间的关联，包含<code>相关系数</code>，<code>数量级类似</code>、<code>总存在大小关系</code></li><li>如果是脱敏的面板数据，可以按照时间排序，观察同一个人下不会变化的<code>固有属性</code>，只增不减的<code>存量</code></li></ol><h1 id="描述性统计"><a href="#描述性统计" class="headerlink" title="描述性统计"></a>描述性统计</h1><p>业务上要看一看</p><ol><li><p>各行均值、期望、最大值、最小值</p><div class="hljs code-wrapper"><pre><code class="hljs python">data.describe()</code></pre></div></li><li><p>啊</p></li></ol><p>技术上要注意</p><ol><li>要留意特征的数据类型，可能会导致bug</li></ol><h1 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h1><h1 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h1><h1 id="异常值处理"><a href="#异常值处理" class="headerlink" title="异常值处理"></a>异常值处理</h1><p>大概有两种处理方式</p><h2 id="视同缺失"><a href="#视同缺失" class="headerlink" title="视同缺失"></a>视同缺失</h2><h2 id="特定值截断"><a href="#特定值截断" class="headerlink" title="特定值截断"></a>特定值截断</h2><h1 id="一览表整合"><a href="#一览表整合" class="headerlink" title="一览表整合"></a>一览表整合</h1><h1 id="相关性分析"><a href="#相关性分析" class="headerlink" title="相关性分析"></a>相关性分析</h1><h1 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h1><h2 id="categorical-merging"><a href="#categorical-merging" class="headerlink" title="categorical merging"></a>categorical merging</h2><h2 id="ont-hot-coding"><a href="#ont-hot-coding" class="headerlink" title="ont-hot coding"></a>ont-hot coding</h2><h2 id="target-coding"><a href="#target-coding" class="headerlink" title="target-coding"></a>target-coding</h2><h1 id="分层建模"><a href="#分层建模" class="headerlink" title="分层建模"></a>分层建模</h1><p>有时候我们的大宽表其实包含了不止一个总体，比如男性喜欢打游戏，女性讨厌打游戏，但是混在一起平均一下得到的结论这个群体既不讨厌也不喜欢打游戏，的到的结论就完全没有意义了。</p>]]></content>
+    <content type="html"><![CDATA[<p>送你三句神奇咒语，改变你的心智模式，帮助你成长</p><span id="more"></span><p>第一句：我不会，我可以学</p><p>第二句：我不懂，请你帮我</p><p>第三局：我错了，我可以改</p><p>永远伟大、光荣、正确，可能是会被讨厌的。真诚的承认自己的错误，不要因为ego拼命维护自己的想法。</p>]]></content>
     
     
     <categories>
       
-      <category>数据预处理</category>
+      <category>鸡汤</category>
       
     </categories>
     
@@ -42,111 +42,16 @@
   
   
   <entry>
-    <title>特征工程</title>
-    <link href="/tongmo/2021/12/16/3%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
-    <url>/tongmo/2021/12/16/3%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/</url>
+    <title>罗振宇，原来还能这么干——2022跨年演讲</title>
+    <link href="/jitang/%E7%BD%97%E6%8C%AF%E5%AE%87%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/"/>
+    <url>/jitang/%E7%BD%97%E6%8C%AF%E5%AE%87%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/</url>
     
-    <content type="html"><![CDATA[<p>着力重点是从业务和数据两个层面发现和定义与Y具有（全局或局部的）显著相关性的“组合”特征</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>]]></content>
-    
-    
-    <categories>
-      
-      <category>数据预处理</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>变量筛选</title>
-    <link href="/tongmo/2021/12/16/4%E5%8F%98%E9%87%8F%E7%AD%9B%E9%80%89/"/>
-    <url>/tongmo/2021/12/16/4%E5%8F%98%E9%87%8F%E7%AD%9B%E9%80%89/</url>
-    
-    <content type="html"><![CDATA[<p>对分类任务，变量粗筛时要注意应该用Information Value还是用Pearson/Spearman Correlation；变量细筛时需要考虑多种方法的结合，包括filter、wrapper、embedding以及不同的模型/算法</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>]]></content>
+    <content type="html"><![CDATA[<p>有没有办法，让物业费降到原有的五分之一？全国大中城市的平均水平是2块钱左右每平米，但在北京一个叫劲松北里的小区，即便紧挨CBD，全国最高的房价水平，但物业费只有0.43元，全国平均值的1/5。</p><span id="more"></span><p>为什么这么便宜呢?</p><p>因为不能贵</p><p>这里是中国城市很常见的居民区,建成于三四十年前.那时候人们喜气洋洋住上了单元房;但现在,居民老了,小区旧了,成了大家说的老破小.</p><p>但如今一家公司专门做这种小区的物业改造和服务,而且物业费只需要平均水平的1/5,这家公司叫愿景。</p><p>0.43元的物业费,就不能请那么多专职清洁工,在北京,一个清洁工月工资起码得三四千,20万平米的消去,大概需要20个人,每个月6-8万元的人工成本,请不起.</p><p>怎么办呢</p><p>愿景发现，这种老社区里不是有不少捡纸壳、捡矿泉水瓶的人吗？他们有些就是附近上岁数的居民，子女反对他们干这个，换不了几个钱还没面子。可是没办法，这属于一种“生活方式”，人人都需要点儿事儿干啊。他们不光捡，还闹矛盾、抢地盘，给小区治安增加了不少负担。</p><p>愿景把他们给组织了起来，解决了小区清洁工的问题，分五步：</p><p>第一，先分地盘，这三栋楼的纸壳子、矿泉水瓶归你捡，那三栋楼的归他收，每个人把片区的卫生包了。这下，他们的<strong>责任感</strong>有了：这是我的地盘啊！</p><p>第二，每个人发一件工作服，背后写上“社区清洁志愿者”。这下，<strong>荣誉感</strong>有了——志愿者，正经事！子女们也不那么反对了。</p><p>第三，专门在楼下给他们搭了小棚子，他们在垃圾里扒拉出来的纸壳子有地方放了。这下，<strong>主场感</strong>也有了。</p><p>第四，不光要把楼前楼后的卫生搞好，还要负责指导居民垃圾分类。这下，工作的<strong>价值感</strong>又上升了。</p><p>第五，每人每月再给发500块津贴。这下，收入也提高了。</p><p>0.43元的物业费，还能把社区的清洁搞好，谜底就这么简单。</p><p>原来，还能这么干！</p><p>我们来复个盘。按传统思路，解决一个小区的清洁问题，那就是花钱、堆资源。有钱就有办法，没钱就没办法。</p><p>但是在这个故事里，你会发现，堆资源不是解决问题的唯一道路。还是那句话：“处于困境中的人往往只关注自己的问题。而解决问题的途径通常在于你如何解决别人的问题。”</p><p>让更多的人，甚至让自己用户之外的人，比如说这些捡垃圾的人过得更好，这本身就是问题的解决方案。</p><h2 id="怎么收老破小社区的停车费"><a href="#怎么收老破小社区的停车费" class="headerlink" title="怎么收老破小社区的停车费"></a>怎么收老破小社区的停车费</h2><p>继续说发生在劲松小区里的故事。</p><p>物业公司的一个收入来源是停车费，但是不好收。</p><p>你别忘了这里曾经是个“老破小”，车主过去都是直接乱停乱放，根本不交费。现在车有人管了，环境规范了，但是到收费的时候，工作人员就容易和住户起冲突了。</p><p>那怎么办？</p><p>愿景的想法是，雇外地小伙儿来收北京小伙儿的停车费，工资高，而且也收不上来。但请北京大爷来收北京小伙儿的停车费，没问题啊！</p><p>小区里那些刚退休的北京大爷，刚退休回家，浑身都是劲儿，也浑身都不得劲，正琢磨着去哪儿找点儿事儿干呢。给他们发个红袖箍，去管停车收费的事。</p><p>怎么管这些北京大爷呢？北京大妈，一个大妈管理一帮大爷，效果好着呢。</p><p>然后，每个人每月再发点辛苦费。大家都满意。</p><p>你看，还是刚才说的那个思路：通过解决别人的问题来解决自己的问题。成本下来了，受益的人多了，4毛3分钱的物业费也能干了。</p><p>你看，做事都需要资源，但是资源可能不是我们原来想的那样。</p><p>我们经常需要拆掉思维里的墙。</p><h2 id="未来的好公司究竟什么样？"><a href="#未来的好公司究竟什么样？" class="headerlink" title="未来的好公司究竟什么样？"></a>未来的好公司究竟什么样？</h2><p>说到拆墙，我还有一个故事。</p><p>一般的小区都是由物业维护树木。专业的人干专业的事，这其实也是我们观念里的一堵墙。</p><p>愿景把小区里的一些树换成果树，请居民自己来认养，到了秋天，结的果子就归认养的人。那你想，主人伺候树不比园丁更精心？“这是我孙子吃的果子，不能让人给糟蹋了”，会天天到楼下转悠。有盼头、多活动，对老人的健康也好。</p><p>然后，每个周五小区里还放电影。这除了能丰富文化生活，也是为了让居民多下楼来活动活动；社区里走动的人一多，大家就熟悉了，互动就多了，来小区租铺面、做生意的商户也跟着多起来了，商铺的租金也就可以高一点了。</p><p>愿景这么一重组运营逻辑，拆掉旧墙，这盘棋就活了。</p><p>我特别不想给你留下两个印象：</p><p>第一，这是一篇好人好事的表扬稿。第二，这是一个精明生意人的如意算盘。</p><p>我是想通过这个故事，回答一个问题：未来的好公司，该是什么样子？</p><p>今年有一个很大的变数：很多有名的大企业陷入困局。它们光环褪色，魅力大减。过去，它们可都是大学生找工作的目标、创业者奋斗的标杆啊。</p><p>但这一年，更高、更快、更强，不再天然带来赞誉，甚至“一家独大”正在被全社会警惕。</p><p>你要是说，“好企业的样子，因为要为人民服务，所以就不能挣钱；因为不能搞垄断，所以就不能长大。”这个很难说服人。</p><p>我们刚才讲的愿景公司，可不是小生意。现在，他们在全国签约管理的老旧小区已经有2.1亿平米，预计服务700万人。</p><p>算笔社会账：一家收费低、服务好的物业，老百姓高兴，打市长热线的投诉也少了，政府也高兴，怎么会不受各方面的欢迎呢？</p><p>再算笔经济账：虽然利润不高，一年只有6%的收益率，但是，有规模，且稳定，还能良性发展，不错啊。</p><p>如果你再考虑，700万人把日常生活开放给你，让你有为他服务的机会，每天看着你的表现，将来零售、养老、房产销售和租赁这些机会，是不是也有可能是你的？</p><p>这是一盘多么好的生意啊。</p><p>愿景的这个故事，恰恰就让我们看到了一种新的可能性——</p><p>一家企业不能仅仅从纯粹的商业逻辑里认知自身，它还要把自己的生存放入到社会的全局利益中。这才是一家好公司的新样子。</p><p>一共53个类似的小故事,<a href="https://mp.weixin.qq.com/s/f2_aZs9y3T5FnldLkbr2oA">点击这里阅读原文</a></p>]]></content>
     
     
     <categories>
       
-      <category>数据预处理</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>建模准备</title>
-    <link href="/tongmo/2021/12/16/5%E5%BB%BA%E6%A8%A1%E5%87%86%E5%A4%87/"/>
-    <url>/tongmo/2021/12/16/5%E5%BB%BA%E6%A8%A1%E5%87%86%E5%A4%87/</url>
-    
-    <content type="html"><![CDATA[<p>使用各种模型/算法前，需要对数据进行适当的处理</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe><h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><p>可以先用逻辑回归做个baseline，但是需要注意的是</p><ol><li>要先处理定类变量，进行WOE化</li></ol><h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><p>对于树模型，有的时候不需要进行特别处理缺失值</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>数据预处理</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>模型调优</title>
-    <link href="/tongmo/2021/12/16/6%E6%A8%A1%E5%9E%8B%E8%B0%83%E4%BC%98/"/>
-    <url>/tongmo/2021/12/16/6%E6%A8%A1%E5%9E%8B%E8%B0%83%E4%BC%98/</url>
-    
-    <content type="html"><![CDATA[<p>俺也不会</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>]]></content>
-    
-    
-    <categories>
-      
-      <category>数据预处理</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>结果评价</title>
-    <link href="/tongmo/2021/12/16/7%E7%BB%93%E6%9E%9C%E8%AF%84%E4%BB%B7/"/>
-    <url>/tongmo/2021/12/16/7%E7%BB%93%E6%9E%9C%E8%AF%84%E4%BB%B7/</url>
-    
-    <content type="html"><![CDATA[<p>必须用未作平衡处理、保留原始比例的数据来测试，才能反映真实效果；在反欺诈问题中，AUC、accuracy都不是好的评价标准，更值得考虑的是recall-precision tradeoff；必须考虑是否能有效地指导业务决策</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>]]></content>
-    
-    
-    <categories>
-      
-      <category>数据预处理</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试</title>
-    <link href="/tongmo/2021/11/16/%E5%B8%88%E9%97%A8%E7%AC%91%E8%AF%9D/"/>
-    <url>/tongmo/2021/11/16/%E5%B8%88%E9%97%A8%E7%AC%91%E8%AF%9D/</url>
-    
-    <content type="html"><![CDATA[<p>奇怪的笑话</p><span id="more"></span><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe><h1 id="魏文侯问扁鹊"><a href="#魏文侯问扁鹊" class="headerlink" title="魏文侯问扁鹊"></a>魏文侯问扁鹊</h1><blockquote><p>可帅问刘合天：“你们光华七子，哪个代码水平最高？”</p><p>刘合天说：“周总最好，成总其次，我最差。”</p><p>可帅甚为不解。</p><p>刘合天解释道：“我周总不等Bug出现就提前预防了，所以名声传不出开发组。成总在Bug出现时顺手解决了，所以名声传不出技术部。我呢，每天像打地鼠一样到处救火，所以在班里没人不知道我。”</p></blockquote><h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>):    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello World&#x27;</span>)</code></pre></div><h1 id="测试流程图"><a href="#测试流程图" class="headerlink" title="测试流程图"></a>测试流程图</h1><pre><code class="mermaid" >ganttdateFormat  YYYY-MM-DDtitle testsection A sectionCompleted task            :done,    des1, 2014-01-06,2014-01-08Active task               :active,  des2, 2014-01-09, 3dFuture task               :         des3, after des2, 5dFuture task2               :         des4, after des3, 5d</code></pre><h1 id="测试其他"><a href="#测试其他" class="headerlink" title="测试其他"></a>测试其他</h1><p><a class="btn" href="url" title="title">点击这里会什么都不发生</a></p><div>            <input type="checkbox" disabled >普通示例          </div><div>            <input type="checkbox" disabled checked="checked">默认选中          </div>            <input type="checkbox" disabled >内联示例           后面文字不换行<input type="checkbox" disabled > 也可以只传入一个参数，文字写在后边（这样不支持外联<a class="btn" href="url"  title="title" target="_blank">text</a>]]></content>
-    
-    
-    <categories>
-      
-      <category>数据预处理</category>
+      <category>有趣的小玩意</category>
       
     </categories>
     

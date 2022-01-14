@@ -7,34 +7,34 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/tongmo/img/like.png">
-  <link rel="icon" href="/tongmo/img/like.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/jitang/img/like.png">
+  <link rel="icon" href="/jitang/img/like.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="对分类任务，变量粗筛时要注意应该用Information Value还是用Pearson/Spearman Correlation；变量细筛时需要考虑多种方法的结合，包括filter、wrapper、embedding以及不同的模型/算法">
+  <meta name="description" content="送你三句神奇咒语，改变你的心智模式，帮助你成长">
   <meta name="author" content="天同学">
   <meta name="keywords" content="">
-  <meta name="description" content="对分类任务，变量粗筛时要注意应该用Information Value还是用Pearson&#x2F;Spearman Correlation；变量细筛时需要考虑多种方法的结合，包括filter、wrapper、embedding以及不同的模型&#x2F;算法">
+  <meta name="description" content="送你三句神奇咒语，改变你的心智模式，帮助你成长">
 <meta property="og:type" content="article">
-<meta property="og:title" content="变量筛选">
-<meta property="og:url" content="https://likexuexi.github.io/tongmo/2021/12/16/4%E5%8F%98%E9%87%8F%E7%AD%9B%E9%80%89/index.html">
+<meta property="og:title" content="靠谱，是一个人最大的资产">
+<meta property="og:url" content="https://likexuexi.github.io/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/index.html">
 <meta property="og:site_name" content="可帅统计建模手册">
-<meta property="og:description" content="对分类任务，变量粗筛时要注意应该用Information Value还是用Pearson&#x2F;Spearman Correlation；变量细筛时需要考虑多种方法的结合，包括filter、wrapper、embedding以及不同的模型&#x2F;算法">
+<meta property="og:description" content="送你三句神奇咒语，改变你的心智模式，帮助你成长">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-12-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-16T03:12:32.041Z">
+<meta property="article:published_time" content="2022-01-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-14T12:30:42.293Z">
 <meta property="article:author" content="天同学">
 <meta name="twitter:card" content="summary_large_image">
   
-  <title>变量筛选 - 可帅统计建模手册</title>
+  <title>靠谱，是一个人最大的资产 - 可帅统计建模手册</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/tongmo/lib/hint/hint.min.css" />
+  <link  rel="stylesheet" href="/jitang/lib/hint/hint.min.css" />
 
   
     
@@ -58,17 +58,17 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
 
-<link  rel="stylesheet" href="/tongmo/css/main.css" />
+<link  rel="stylesheet" href="/jitang/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"likexuexi.github.io","root":"/tongmo/","version":"1.8.12","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/tongmo/local-search.xml"};
+    var CONFIG = {"hostname":"likexuexi.github.io","root":"/jitang/","version":"1.8.12","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/jitang/local-search.xml"};
   </script>
-  <script  src="/tongmo/js/utils.js" ></script>
-  <script  src="/tongmo/js/color-schema.js" ></script>
+  <script  src="/jitang/js/utils.js" ></script>
+  <script  src="/jitang/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -76,7 +76,7 @@
   <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/tongmo/">
+    <a class="navbar-brand" href="/jitang/">
       <strong>统计建模手册</strong>
     </a>
 
@@ -95,7 +95,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tongmo/">
+              <a class="nav-link" href="/jitang/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -107,7 +107,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tongmo/categories/">
+              <a class="nav-link" href="/jitang/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -119,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tongmo/about/">
+              <a class="nav-link" href="/jitang/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -131,7 +131,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tongmo/links/">
+              <a class="nav-link" href="/jitang/links/">
                 <i class="iconfont icon-link-fill"></i>
                 友链
               </a>
@@ -143,7 +143,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tongmo/update/">
+              <a class="nav-link" href="/jitang/update/">
                 <i class="iconfont icon-archive-fill"></i>
                 更新日志
               </a>
@@ -169,12 +169,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/tongmo/img/default.png') no-repeat center center;
+         style="background: url('/jitang/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="变量筛选">
+            <span class="h2" id="subtitle" title="靠谱，是一个人最大的资产">
               
             </span>
 
@@ -193,7 +193,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      117 字
+      107 字
     </span>
   
 
@@ -239,17 +239,16 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">变量筛选</h1>
+            <h1 style="display: none">靠谱，是一个人最大的资产</h1>
             
             <div class="markdown-body">
-              <p>对分类任务，变量粗筛时要注意应该用Information Value还是用Pearson/Spearman Correlation；变量细筛时需要考虑多种方法的结合，包括filter、wrapper、embedding以及不同的模型/算法</p>
+              <p>送你三句神奇咒语，改变你的心智模式，帮助你成长</p>
 <span id="more"></span>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28285910&auto=1&height=66"></iframe>
-
-
-
-
+<p>第一句：我不会，我可以学</p>
+<p>第二句：我不懂，请你帮我</p>
+<p>第三局：我错了，我可以改</p>
+<p>永远伟大、光荣、正确，可能是会被讨厌的。真诚的承认自己的错误，不要因为ego拼命维护自己的想法。</p>
 
             </div>
             <hr>
@@ -259,7 +258,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/tongmo/categories/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/">数据预处理</a>
+                      <a class="hover-with-bg" href="/jitang/categories/%E9%B8%A1%E6%B1%A4/">鸡汤</a>
                     
                   </div>
                 
@@ -277,9 +276,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tongmo/2021/12/16/3%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/">
+                      <a href="/jitang/%E9%9D%A0%E8%B0%B1%E6%98%AF%E4%BA%BA%E6%9C%80%E5%A4%A7%E7%9A%84%E8%B5%84%E4%BA%A7/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">特征工程</span>
+                        <span class="hidden-mobile">靠谱，是一个人最大的资产</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -287,8 +286,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tongmo/2021/12/16/5%E5%BB%BA%E6%A8%A1%E5%87%86%E5%A4%87/">
-                        <span class="hidden-mobile">建模准备</span>
+                      <a href="/jitang/%E7%BD%97%E6%8C%AF%E5%AE%87%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/">
+                        <span class="hidden-mobile">罗振宇，原来还能这么干——2022跨年演讲</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -410,18 +409,18 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="/tongmo/js/events.js" ></script>
-<script  src="/tongmo/js/plugins.js" ></script>
+<script  src="/jitang/js/events.js" ></script>
+<script  src="/jitang/js/plugins.js" ></script>
 
 <!-- Plugins -->
 
 
-  <script  src="/tongmo/js/local-search.js" ></script>
+  <script  src="/jitang/js/local-search.js" ></script>
 
 
 
   
-    <script  src="/tongmo/js/img-lazyload.js" ></script>
+    <script  src="/jitang/js/img-lazyload.js" ></script>
   
 
 
@@ -465,6 +464,48 @@
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
 
 
 
@@ -476,7 +517,7 @@
 
 
 <!-- 主题的启动项 保持在最底部 -->
-<script  src="/tongmo/js/boot.js" ></script>
+<script  src="/jitang/js/boot.js" ></script>
 
 
 </body>
